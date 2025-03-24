@@ -1,8 +1,8 @@
-# Real-Time Chat Application - Laravel + Vue.js
+# Customer Support System - Laravel + Vue.js
 
 ![Project Banner](https://repository-images.githubusercontent.com/603411565/4e13dc7c-b56d-44fe-a39a-6d5d7e3ae137)
 
-A full-stack real-time chat application built with Laravel backend and Vue.js frontend, featuring ticket management, comments, and live chat functionality.
+A full-stack Customer Support System built with Laravel backend and Vue.js frontend, featuring ticket management, comments, and chat functionality.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -125,4 +125,4 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
 
 1. New chat channels are created for each new tickets
 2. Admins can send messages to any channels but users can only send messages to their tickets
-3. To try out the chatting feature navigate to a single ticket view and then the chatbox should appear at the sidebar
+3. To try out the chatting feature navigate to a single ticket view and then the chat box should appear at the sidebar
