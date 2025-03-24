@@ -1,6 +1,6 @@
 # Real-Time Chat Application - Laravel + Vue.js
 
-![Project Banner](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FmuhaiminShihab%2Flaravel-vue&psig=AOvVaw0sQT7E4eadOxS8MhnRZUvq&ust=1742910589701000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjXiofuoowDFQAAAAAdAAAAABAI)
+![Project Banner](https://repository-images.githubusercontent.com/603411565/4e13dc7c-b56d-44fe-a39a-6d5d7e3ae137)
 
 A full-stack real-time chat application built with Laravel backend and Vue.js frontend, featuring ticket management, comments, and live chat functionality.
 
