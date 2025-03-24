@@ -460,23 +460,6 @@
                   </div>
                   <!--end::Input group-->
 
-                  <!--begin::Input group-->
-                  <div class="d-flex flex-column mb-8 fv-row">
-                    <!--begin::Label-->
-                    <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
-                      <span>Attachment</span>
-
-                      <span class="ms-2" data-bs-toggle="tooltip" title="Specify a subject for your issue"></span>
-                    </label>
-                    <!--end::Label-->
-
-                    <input type="file" class="form-control form-control-solid" placeholder="Enter your ticket subject" name="attachment" />
-                    <div v-if="errors.attachment" class="fv-plugins-message-container">
-                        <div data-field="attachment" data-validator="notEmpty" class="fv-help-block">{{ errors.attachment[0] }}</div>
-                    </div>
-                  </div>
-                  <!--end::Input group-->
-
                   <!--begin::Actions-->
                   <div class="text-center">
                     <button type="reset" id="kt_modal_new_ticket_cancel" class="btn btn-light me-3">
@@ -611,23 +594,6 @@
                       </select>
                       <div v-if="errors.status" class="fv-plugins-message-container">
                         <div data-field="status" data-validator="notEmpty" class="fv-help-block">{{ errors.status[0] }}</div>
-                    </div>
-                  </div>
-                  <!--end::Input group-->
-
-                  <!--begin::Input group-->
-                  <div class="d-flex flex-column mb-8 fv-row" v-else>
-                    <!--begin::Label-->
-                    <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
-                      <span>Attachment</span>
-
-                      <span class="ms-2" data-bs-toggle="tooltip" title="Specify a subject for your issue"></span>
-                    </label>
-                    <!--end::Label-->
-
-                    <input type="file" class="form-control form-control-solid" placeholder="Enter your ticket subject" name="attachment" />
-                    <div v-if="errors.attachment" class="fv-plugins-message-container">
-                        <div data-field="attachment" data-validator="notEmpty" class="fv-help-block">{{ errors.attachment[0] }}</div>
                     </div>
                   </div>
                   <!--end::Input group-->
