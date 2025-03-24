@@ -14,7 +14,7 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
 - [Assumptions](#assumptions)
 - [Troubleshooting](#troubleshooting)
 
-## Required Softwares / Frameworks / Runtimes
+## Prerequisites
 
 - PHP v8.2.12
 - Composer v2.8.6
