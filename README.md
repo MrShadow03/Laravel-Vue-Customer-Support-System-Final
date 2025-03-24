@@ -1,6 +1,6 @@
 # Real-Time Chat Application - Laravel + Vue.js
 
-![Project Banner](https://via.placeholder.com/800x200?text=Laravel+Vue+RealTime+Chat)
+![Project Banner](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FmuhaiminShihab%2Flaravel-vue&psig=AOvVaw0sQT7E4eadOxS8MhnRZUvq&ust=1742910589701000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjXiofuoowDFQAAAAAdAAAAABAI)
 
 A full-stack real-time chat application built with Laravel backend and Vue.js frontend, featuring ticket management, comments, and live chat functionality.
 
@@ -21,8 +21,6 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
 - Node.js 14+
 - npm/yarn
 - MySQL 5.7+
-- Pusher account (for real-time features)
-- Redis (optional for queue management)
 
 ## Setup Instructions
 
@@ -30,7 +28,7 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
 
 1. **Clone the repository**
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/MrShadow03/Laravel-Vue-Customer-Support-System-Final
    cd backend
    ```
 
@@ -43,32 +41,31 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
    ```bash
    cp .env.example .env
    ```
-   Edit `.env` with your database and Pusher credentials:
-   ```env
-   DB_DATABASE=your_db_name
-   DB_USERNAME=your_db_user
-   DB_PASSWORD=your_db_password
-
-   BROADCAST_DRIVER=pusher
-   PUSHER_APP_ID=your_app_id
-   PUSHER_APP_KEY=your_app_key
-   PUSHER_APP_SECRET=your_app_secret
-   PUSHER_APP_CLUSTER=your_cluster
-   ```
 
 4. **Generate application key**
    ```bash
    php artisan key:generate
    ```
+5. **Create a new MySQL database named "customer-support-system"**
 
-5. **Run migrations**
+6. **Run migrations and seed**
    ```bash
    php artisan migrate --seed
    ```
 
-6. **Start the server**
+7. **Start the server**
    ```bash
    php artisan serve
+   ```
+8. **Admin Credentials**
+    After migrating and seeding the database 2 admin accounts should be created automatically with the following credentials:
+    ```bash
+   Email: admin@example.com
+   Password: password
+   ```
+    ```bash
+   Email: admin2@example.com
+   Password: password
    ```
 
 ### Frontend Setup
@@ -83,15 +80,7 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
    npm install
    ```
 
-3. **Configure environment**
-   Create `.env` file:
-   ```env
-   VITE_API_URL=http://localhost:8000
-   VITE_PUSHER_APP_KEY=your_pusher_app_key
-   VITE_PUSHER_APP_CLUSTER=your_pusher_cluster
-   ```
-
-4. **Start development server**
+3. **Start development server**
    ```bash
    npm run dev
    ```
@@ -135,40 +124,6 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
 
 ## Chat Implementation
 
-The real-time chat feature uses:
-
-1. **Pusher Channels** for WebSocket communication
-2. **Laravel Broadcasting** to send events
-3. **Private Channels** for secure communication
-4. **Vue.js reactivity** for instant UI updates
-
-### Flow:
-1. User sends message via POST /chats/{ticket}
-2. Laravel broadcasts NewChatMessage event
-3. Pusher delivers event to all subscribers
-4. Vue.js receives event and updates UI in real-time
-
-## Assumptions
-
-1. Users have only one role (customer or admin)
-2. Tickets belong to customers
-3. All authenticated users can participate in chats
-4. Frontend runs on port 3000, backend on 8000
-5. Development environment uses local Pusher config
-
-## Troubleshooting
-
-**403 Forbidden on /broadcasting/auth**
-- Verify Sanctum token is being sent
-- Check CORS configuration
-- Ensure session driver is cookie
-
-**Real-time not working**
-- Verify Pusher credentials
-- Check browser console for errors
-- Ensure event is properly broadcasting
-
-**Authentication issues**
-- Clear Laravel cache
-- Verify Sanctum configuration
-- Check token expiration
+1. New chat channels are created for each new tickets
+2. Admins can send messages to any channels but users can only send messages to their tickets
+3. To try out the chatting feature navigate to a single ticket view and then the chatbox should appear at the sidebar

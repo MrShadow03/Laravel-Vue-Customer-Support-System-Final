@@ -25,6 +25,13 @@ class RoleSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
         $admin->assignRole($adminRole);
+        
+        $admin2 = User::create([
+            'name' => 'Admin User 2',
+            'email' => 'admin2@example.com',
+            'password' => Hash::make('password'),
+        ]);
+        $admin2->assignRole($adminRole);
 
         // Create a customer user
         $customer = User::create([
