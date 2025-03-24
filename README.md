@@ -14,12 +14,11 @@ A full-stack real-time chat application built with Laravel backend and Vue.js fr
 - [Assumptions](#assumptions)
 - [Troubleshooting](#troubleshooting)
 
-## Prerequisites
+## Required Softwares / Frameworks / Runtimes
 
-- PHP 8.0+
-- Composer
-- Node.js 14+
-- npm/yarn
+- PHP v8.2.12
+- Composer v2.8.6
+- Node.js v22.14.0
 - MySQL 5.7+
 
 ## Setup Instructions
